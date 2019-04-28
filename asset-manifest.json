@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/intec-oferta/static/js/main.72b32597.chunk.js",
+    "main.js.map": "/intec-oferta/static/js/main.72b32597.chunk.js.map",
+    "runtime~main.js": "/intec-oferta/static/js/runtime~main.9ecb757e.js",
+    "runtime~main.js.map": "/intec-oferta/static/js/runtime~main.9ecb757e.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/intec-oferta/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.c890ccce.chunk.js": "/intec-oferta/static/js/2.c890ccce.chunk.js",
+    "static/js/2.c890ccce.chunk.js.map": "/intec-oferta/static/js/2.c890ccce.chunk.js.map",
+    "index.html": "/intec-oferta/index.html",
+    "precache-manifest.6c455f5ee0bc3360505c2be15951edfd.js": "/intec-oferta/precache-manifest.6c455f5ee0bc3360505c2be15951edfd.js",
+    "service-worker.js": "/intec-oferta/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/intec-oferta/static/css/2.22a7d4ef.chunk.css.map"
+  }
+}
