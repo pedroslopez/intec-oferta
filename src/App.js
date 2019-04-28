@@ -13,7 +13,7 @@ import Search from './components/Search';
 const App = () => {
     return (
         <Router>
-            <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="md">
                 <Container>
                     <LinkContainer to="/">
                         <Navbar.Brand>Notificador de Cambios</Navbar.Brand>

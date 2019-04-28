@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 import Section from '../components/Section';
 import ChangeTable from '../components/ChangeTable';
+import SubscribeDialog from '../components/SubscribeDialog';
 
 import useChanges from '../hooks/useChanges';
 
@@ -15,6 +16,7 @@ const Class = ({match}) => {
     const changes = useChanges(match.params.code);
     const [sections, setSections] = useState([]);
     const [classInfo, setClassInfo] = useState(null);
+    const [showSubscribe, setShowSubscribe] = useState(false);
     
     useEffect(() => {
         fetch(BASE_URL + match.params.code).then(res => {
@@ -56,12 +58,13 @@ const Class = ({match}) => {
 
     return (
         <div className="mt-4">
+            <SubscribeDialog defaultCode={match.params.code} show={showSubscribe} handleClose={() => setShowSubscribe(false)} />
             <div className="p-3 my-3 d-md-flex justify-content-between text-white-50 bg-primary rounded shadow-sm">
                 <div className="mb-2 mb-md-0">
                     <h6 className="text-white mb-0">Suscríbete</h6>
                     <span>Recibe notificaciones al correo cuando ocurra un cambio en esta asignatura.</span>
                 </div>
-                <Button variant="outline-light">Suscribirse</Button>
+                <Button variant="outline-light" onClick={() => setShowSubscribe(true)}>Suscribirse</Button>
             </div>
             {classInfo ? 
                 <Section>
