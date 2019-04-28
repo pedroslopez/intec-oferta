@@ -94,7 +94,6 @@ const SubscribeDialog = ({ show, handleClose, defaultCode }) => {
             </Modal.Header>
 
             <Modal.Body>
-                <p>Modal body text goes here.</p>
                 <Form onSubmit={_handleFormSubmit} ref={formRef} validated={validated}>
                     <Form.Group as={Form.Row}>
                         <Form.Label column sm={2}>Código</Form.Label>
