@@ -1,0 +1,1 @@
+export const API_URL = 'https://intec-oferta.herokuapp.com';

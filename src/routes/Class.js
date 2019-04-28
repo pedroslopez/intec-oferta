@@ -10,7 +10,8 @@ import SubscribeDialog from '../components/SubscribeDialog';
 
 import useChanges from '../hooks/useChanges';
 
-const BASE_URL = 'https://intec-oferta.herokuapp.com/v1/offer/';
+import { API_URL } from '../config';
+const BASE_URL = API_URL + '/v1/offer/';
 
 const Class = ({match}) => {
     const changes = useChanges(match.params.code);
