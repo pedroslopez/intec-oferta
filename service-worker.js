@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/intec-oferta/precache-manifest.6c455f5ee0bc3360505c2be15951edfd.js"
+  "/intec-oferta/precache-manifest.e3cab130be099bebc3130b4c03f94fcd.js"
 );
 
 self.addEventListener('message', (event) => {
