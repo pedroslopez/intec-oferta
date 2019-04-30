@@ -30,6 +30,9 @@ const App = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/:code" exact component={Class} />
                 </Switch>
+                <div className="m-4 text-center">
+                    <a href="https://github.com/pedroslopez/intec-oferta/" target="_blank" rel="noopener noreferrer" className="text-muted">View on GitHub</a>
+                </div>
             </Container>
         </Router>
 

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 
 import Section from '../components/Section';
 import ChangeTable from '../components/ChangeTable';
@@ -34,7 +35,11 @@ const Home = ({ history }) => {
               </p>
           </Jumbotron>
           <Section title="Últimos cambios">
-              <ChangeTable changes={changes} onClick={onClickChange} />
+            {changes ? 
+                <ChangeTable changes={changes} onClick={onClickChange} />
+              : <div className="d-flex p-4 justify-content-center"><Spinner as="span"
+                    animation="border"
+                    role="status"/></div> }
           </Section>
         </>
     )

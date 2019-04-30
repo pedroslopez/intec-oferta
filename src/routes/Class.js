@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 
 import Section from '../components/Section';
 import ChangeTable from '../components/ChangeTable';
@@ -18,11 +19,13 @@ const Class = ({match}) => {
     const [sections, setSections] = useState([]);
     const [classInfo, setClassInfo] = useState(null);
     const [showSubscribe, setShowSubscribe] = useState(false);
+    const [loadingClass, setLoadingClass] = useState(true);
     
     useEffect(() => {
         fetch(BASE_URL + match.params.code).then(res => {
             return res.json();
         }).then(res => {
+            setLoadingClass(false);
             if(res.success) {
                 setSections(res.sections);
                 if(res.sections.length > 0) {
@@ -92,9 +95,18 @@ const Class = ({match}) => {
                         </tbody>
                     </Table>
                 </Section> 
-            : <Alert variant="danger">Esta asignatura no se encuentra en la oferta académica.</Alert>}
+            : null} 
+            {loadingClass ? <div className="d-flex p-4 justify-content-center"><Spinner as="span"
+                    animation="border"
+                    role="status"/></div> : null}
+            {!classInfo && !loadingClass ? <Alert variant="danger">Esta asignatura no se encuentra en la oferta académica.</Alert> : null}
+                
             <Section title="Últimos cambios">
+            {changes ? 
                 <ChangeTable changes={changes} />
+              : <div className="d-flex p-4 justify-content-center"><Spinner as="span"
+                    animation="border"
+                    role="status"/></div> }
             </Section>
         </div>
     );

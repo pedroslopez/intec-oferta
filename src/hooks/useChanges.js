@@ -4,7 +4,7 @@ import { API_URL } from '../config';
 const ROUTE = API_URL + '/v1/diff';
 
 const useChanges = (code, section) => {
-    const [changes, setChanges] = useState([]);
+    const [changes, setChanges] = useState(null);
 
     useEffect(() => {
         let url = ROUTE;
